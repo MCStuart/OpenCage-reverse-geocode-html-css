@@ -10960,6 +10960,10 @@ footer.fixed {
   border-color: #f0f0f0
 }
 
+#geocoder-header-bg {
+  background-color: #009966;
+}
+
 #geocoder-header nav.navbar-dark .navbar-brand {
   border-radius: 4px
 }
@@ -11087,18 +11091,23 @@ footer.fixed {
   #geocoder-header .navbar-nav .dropdown-menu .dropdown-item {
     padding: 0.2em 0.5em !important
   }
+
+  .green-world-bg {
+    height: 300px;
+  }
+}
+
+@media (min-width: 767px) {
+  .green-world-bg {
+    height: 600px;
+  }
 }
 
 .green-world-bg {
-  background: url(https://assets.opencagedata.com/assets/geocoder-header-637f4b243b03dcae0714d5b417e78ecb39ffa190716225de57de5ca019cc1ea5.jpg) no-repeat bottom center scroll;
+  background-image: url(../../Illustrations/EveryDeveloper\ Illustration\ 1-1\ vF.svg);
   background-size: cover;
-  min-height: 700px;
-}
-
-@media (max-width: 750px) {
-  .green-world-bg {
-    height: 400px;
-  }
+  background-position: bottom center;
+  background-repeat: no-repeat;
 }
 
 #stay-informed-promo {
@@ -11132,14 +11141,12 @@ footer.fixed {
 #geocoder-title {
   position: relative;
   color: #fdfdfd;
-  height: 250px;
-  padding-top: 50px;
   text-align: center
 }
 
 #geocoder-title h1 {
-  font: 100 44px/45px Roboto;
-  color: white
+  font: 250 44px/45px Roboto;
+  color: #448667;
 }
 
 #geocoder-title p {
@@ -11154,8 +11161,6 @@ footer.fixed {
 @media (max-width: 767px) {
   #geocoder-title {
     height: auto;
-    padding-top: 1em;
-    padding-bottom: 1em
   }
 }
 
@@ -12152,7 +12157,8 @@ footer.fixed {
   background-color: #e6f4ed;
   font-size: 1.5em;
   line-height: 1.7em;
-  padding: 2em
+  padding: 2em;
+  padding-top: 0.5em;
 }
 
 .lgrow {
