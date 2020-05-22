@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link href="https://assets.opencagedata.com/" rel="dns-prefetch">
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="Reverse geocoding Guide by OpenCage
+" name="description">
+  <meta content="follow, index" name="robots">
+  <meta content="Guide to Reverse Geocoding - 
+OpenCage reverse geocoding guide
+" property="og:title">
+  <meta content="website" property="og:type">
+  <meta
+    content="https://assets.opencagedata.com/assets/opencage_logo_200_100-e9dd4f5fd590feea8ca42cfe9c63c4cfe68952c4972bfebb661e83befb84123a.png"
+    name="og:logo">
+  <meta content="Reverse geocoding Guide by OpenCage
+" property="og:description">
+  <meta content="https://opencagedata.com/reverse-geocoding/" property="og:url">
+  <meta
+    content="https://assets.opencagedata.com/assets/reverse-geocoding-guide-525ff783917434cd2678dcfbeb7ef959fa95fef55ec2e1abaf1ebcfc4c47f887.png"
+    name="og:image">
+
+  <meta content="summary" name="twitter:card">
+  <meta content="Guide to Reverse Geocoding - 
+OpenCage reverse geocoding guide
+" name="twitter:title">
+  <meta content="Reverse geocoding Guide by OpenCage
+" name="twitter:description">
+  <meta content="https://opencagedata.com/reverse-geocoding/" name="twitter:url">
+  <meta
+    content="https://assets.opencagedata.com/assets/reverse-geocoding-guide-525ff783917434cd2678dcfbeb7ef959fa95fef55ec2e1abaf1ebcfc4c47f887.png"
+    name="twitter:image">
+
+  <meta content="5lTtMtpl6wP-mAwEqc4F6UXGjSyaBvwiNK1jBMj6mCA" name="google-site-verification">
+  <meta content="#1a8865" name="theme-color">
+  <title>Guide to Reverse Geocoding -
+    OpenCage reverse geocoding guide
+  </title>
+  <link
+    href="https://assets.opencagedata.com/assets/favicon-8af0093555aa47d974c34acb2136ca359fc96efebed2c9126d6db7d6d47427ef.ico"
+    rel="shortcut icon" type="image/x-icon">
+  <link
+    href="https://assets.opencagedata.com/assets/favicon-32x32-a2e03b647e1687e629c4fd3e9579b640c075c31be990bfe485191271903b3e52.png"
+    rel="icon" sizes="32x32" type="image/png">
+  <link
+    href="https://assets.opencagedata.com/assets/favicon-16x16-b768394fafc0abd550607112e481d4da3cc26ff73faf5a77c3f8222768232830.png"
+    rel="icon" sizes="16x16" type="image/png">
+
+  <link rel="stylesheet" media="all"
+    href="Guide%20to%20Reverse%20Geocoding%20-%20OpenCage%20reverse%20geocoding%20guide_files/visitors-481f8bc1b06dab271f5304e3365db7215fa49a34911d01eb984.css">
+  <link as="font" crossorigin="anonymous"
+    href="https://assets.opencagedata.com/assets/Roboto_100-48433679240732ed1a9b98e195a75785607795037757e3571ff91878a20a93b2.woff"
+    rel="preload" type="font/woff2">
+  <link as="font" crossorigin="anonymous"
+    href="https://assets.opencagedata.com/assets/Roboto_400-1570f866bf6eae82041e407280894a86ad2b8b275e01908ae156914dc693a4ed.woff"
+    rel="preload" type="font/woff2">
+  <link as="font" crossorigin="anonymous"
+    href="https://assets.opencagedata.com/assets/Roboto_700-468e579fe1210fa55525b1c470ed2d1958404512a2dd4fb972cac5ce0ff00b1f.woff"
+    rel="preload" type="font/woff2">
+  <link href="https://opencagedata.com/reverse-geocoding/" rel="canonical">
+  <meta name="csrf-param" content="authenticity_token">
+  <meta name="csrf-token"
+    content="lEoXYj+YMTh/py0tqMFY4/Oz5RP/P9nWd2hsA7mwQ685AM6jI+vnDBXqqiNB8S7Uu+gYzPPG2TL9PANsowhXrw==">
+  <style>
+    #geocoder-title {
+      height: 125px;
+      padding-top: 25px;
+    }
+  </style>
+
+</head>
+
+<body>
+  <header>
+    <div class="green-world-bg">
+      <div class="container" id="geocoder-header">
+        <nav class="navbar navbar-dark navbar-expand-lg">
+          <div class="container align-items-center">
+            <a class="navbar-brand" href="https://opencagedata.com/">
+
+              <!-- Generator: Adobe Illustrator 16.2.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  --><svg
+                xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1"
+                x="0px" y="0px" viewBox="95 170 250 260" xml:space="preserve" role="img"
+                aria-labelledby="adcpr8r0c3rnyjup4ri6x0sddhpwelwx" height="40" width="104">
+                <title id="adcpr8r0c3rnyjup4ri6x0sddhpwelwx">OpenCage Geocoder logo</title>
+                <path fill="#FFF"
+                  d="M299.7,261.48l0.06-1.02c0-25.24-21.17-47.03-51.33-56.53c13.01,12.69,22.13,32.73,24.42,56.5h-0.02  c0.04,0.35,0.08,0.7,0.11,1.05h-10.02c-2.8-29.06-17.18-52.45-35.58-60.02c7.93,18.09,9.15,51.57,9.42,60.02l-9.41-0.13  c-1.31-40.94-9.32-60.57-12.82-62.41c-4.69,2.21-13.13,28.3-13.13,72.81v132.94h-9.56V271.75c0-21.32,2.35-53.09,9.94-70.32  c-0.18,0.07-0.37,0.15-0.55,0.23c-0.39,0.16-0.77,0.33-1.15,0.51c-0.72,0.33-1.42,0.69-2.12,1.07c-0.11,0.05-0.21,0.11-0.31,0.17  c-0.32,0.17-0.63,0.35-0.94,0.54c-2.6,1.53-5.09,3.38-7.45,5.53c-0.28,0.25-0.57,0.52-0.85,0.78c-0.41,0.39-0.81,0.78-1.21,1.19  c-0.3,0.3-0.6,0.61-0.9,0.93c-1.52,1.61-2.97,3.34-4.35,5.19c-0.18,0.24-0.36,0.48-0.53,0.72c-1.63,2.24-3.16,4.65-4.58,7.21  c-0.23,0.41-0.46,0.83-0.68,1.26c-0.08,0.14-0.15,0.29-0.23,0.43c-0.39,0.75-0.77,1.51-1.14,2.28c-0.07,0.14-0.13,0.29-0.2,0.43  c-0.19,0.39-0.37,0.78-0.55,1.18c-0.22,0.48-0.44,0.97-0.65,1.47c-0.22,0.49-0.43,0.99-0.62,1.49c-0.18,0.41-0.34,0.81-0.49,1.22  c-0.06,0.15-0.12,0.3-0.18,0.45c-0.33,0.85-0.65,1.72-0.95,2.59c-0.04,0.11-0.08,0.23-0.12,0.35c-0.18,0.52-0.36,1.05-0.53,1.58  s-0.34,1.06-0.5,1.6c-0.54,1.76-1.03,3.56-1.47,5.4c-0.1,0.4-0.19,0.8-0.28,1.21c-0.1,0.4-0.18,0.79-0.27,1.19  c-0.07,0.34-0.14,0.68-0.21,1.02c-0.32,1.54-0.6,3.11-0.84,4.69c-0.19,1.17-0.35,2.35-0.49,3.55c-0.08,0.59-0.14,1.19-0.2,1.8  c-0.03,0.24-0.06,0.49-0.07,0.74c-0.09,0.85-0.16,1.71-0.22,2.57c-0.04,0.51-0.07,1.02-0.1,1.53c-0.03,0.49-0.06,0.98-0.08,1.47  c-0.01,0.41-0.03,0.81-0.04,1.22c-0.02,0.55-0.03,1.11-0.04,1.66c-0.01,0.62-0.02,1.25-0.02,1.87v132.94h-9.56l-0.01-132.94  c0-1.9,0.05-3.79,0.14-5.66c0.02-0.49,0.05-0.99,0.08-1.48c0.02-0.35,0.04-0.7,0.07-1.05c0.15-2.22,0.37-4.41,0.66-6.57  c0.05-0.45,0.11-0.89,0.18-1.33c0.06-0.49,0.13-0.98,0.21-1.46c0.26-1.69,0.56-3.36,0.89-5.01c0.08-0.38,0.16-0.76,0.24-1.14  c0.09-0.42,0.18-0.83,0.27-1.24c0.6-2.62,1.28-5.18,2.05-7.68c0.16-0.53,0.33-1.06,0.5-1.58c0.16-0.49,0.32-0.98,0.49-1.46  c0.2-0.6,0.41-1.2,0.63-1.79c0.66-1.82,1.37-3.61,2.13-5.35c0.19-0.45,0.39-0.88,0.59-1.32c0.23-0.52,0.47-1.03,0.71-1.54  c0.19-0.42,0.39-0.83,0.6-1.24c0.17-0.34,0.33-0.67,0.51-1.01c0.26-0.53,0.54-1.06,0.82-1.58c0.35-0.66,0.71-1.31,1.08-1.95  c0.29-0.52,0.59-1.03,0.9-1.54c0.17-0.3,0.35-0.59,0.53-0.88c0.61-1,1.24-1.98,1.89-2.93c0.14-0.2,0.27-0.4,0.41-0.6  c0.3-0.44,0.61-0.87,0.92-1.3c0.02-0.04,0.05-0.08,0.08-0.12c0.41-0.56,0.81-1.11,1.23-1.64c0.42-0.56,0.86-1.11,1.3-1.65  c0.33-0.41,0.66-0.81,1-1.2c0.06-0.08,0.13-0.16,0.2-0.24c0.33-0.4,0.68-0.79,1.03-1.17c0.02-0.03,0.05-0.06,0.08-0.09  c0.31-0.35,0.62-0.69,0.95-1.02c0.31-0.35,0.64-0.68,0.97-1.02c0.43-0.44,0.87-0.87,1.31-1.3c-30.72,9.32-52.34,31.29-52.34,56.85  l-0.06,144.23h-9.51V260.46c0-39.24,42.49-71.17,94.74-71.18h0.01l0.01,0.68l0.01,0.33v-0.49l0.02-0.52c0.11,0,0.22,0,0.33,0.01  v-0.01c52.03,0.15,94.37,33.02,94.37,72.12L299.7,261.48z">
+                </path>
+                <path fill="#FFF"
+                  d="M214.61,189.28v1.01l-0.01-0.33l-0.01-0.68C214.6,189.28,214.6,189.28,214.61,189.28z"></path>
+                <rect x="299.759" y="369.004" fill="#FFF" width="9.567" height="35.688"></rect>
+                <polyline fill="none" stroke="#FFF" stroke-width="2" stroke-miterlimit="10"
+                  points="268.615,369.004 268.615,399.907   273.399,399.907 "></polyline>
+                <polygon fill="#FFF" points="273.399,404.691 263.881,404.691 263.832,369.004 273.399,369.004 ">
+                </polygon>
+                <polygon fill="#FFF" points="214.61,189.8 214.61,190.29 214.6,189.96 "></polygon>
+                <polygon fill="#FFF" points="237.57,404.691 228.049,404.691 228.049,369.004 237.617,369.004 "></polygon>
+                <path fill="none" stroke="#FFF" stroke-width="2" stroke-miterlimit="10" d="M165.676,399.907"></path>
+                <polygon fill="#FFF" points="156.11,404.69 156.1,404.69 156.1,271.75 "></polygon>
+                <polygon fill="#FFF" points="165.68,404.69 165.67,404.69 165.67,271.75 "></polygon>
+              </svg>
+
+            </a>
+            <button aria-expanded="false" aria-label="Toggle navigation" class="btn navbar-toggler"
+              data-target="#navbar-collapsable" data-toggle="collapse">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbar-collapsable">
+              <ul class="navbar-nav">
+                <li class="nav-item dropdown hover-dropdown">
+                  <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button">
+                    <span class="nav-link-inner-text">Documentation</span>
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li>
+                      <a class="dropdown-item media" href="https://opencagedata.com/api">
+                        <div class="media-body align-self-center">
+                          <h5>API documentation</h5>
+                          <div class="desc">parameters, best practices, response codes</div>
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="https://opencagedata.com/code">Tutorials</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item media" href="https://opencagedata.com/code#libraries">
+                        <div class="media-body align-self-center">
+                          <h5>Libraries and SDKs</h5>
+                          <div class="desc">example code, integrations</div>
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item media" href="https://opencagedata.com/why-use-open-data">Why use open
+                        data?</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item media" href="https://opencagedata.com/faq">
+                        <div class="media-body align-self-center">
+                          <h5>FAQ</h5>
+                          <div class="desc">technical, billing, legal</div>
+                        </div>
+                      </a>
+                    </li>
+                    <li class="dropdown-divider"></li>
+                    <li>
+                      <a class="dropdown-item" href="https://status.opencagedata.com/" rel="noopener" target="_blank">
+                        Service status
+                        <i class="fas fa-circle" id="server-status"></i>
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav-item"><a class="nav-link" href="https://opencagedata.com/demo">Demo</a></li>
+                <li class="nav-item"><a class="nav-link" href="https://opencagedata.com/pricing">Pricing</a></li>
+                <li class="nav-item dropdown hover-dropdown">
+                  <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button">
+                    <span class="nav-link-inner-text">Use cases</span>
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li>
+                      <a class="dropdown-item" href="https://opencagedata.com/tutorials/migrate-from-googlemaps">
+                        Switching from Google Maps
+                      </a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="https://opencagedata.com/tutorials/migrate-from-nominatim">
+                        Switching from Nominatim
+                      </a>
+                    </li>
+                    <li class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="https://opencagedata.com/solutions/vehicle-tracking">Fleet
+                        Tracking</a></li>
+                    <li><a class="dropdown-item" href="https://opencagedata.com/solutions/internet-of-things">Internet
+                        of Things</a></li>
+                    <li><a class="dropdown-item" href="https://opencagedata.com/solutions/data-enrichment">Data
+                        Enrichment</a></li>
+                    <li><a class="dropdown-item" href="https://opencagedata.com/solutions/payment-processing">Payment
+                        Processing</a></li>
+                    <li><a class="dropdown-item" href="https://opencagedata.com/solutions/classifieds">Classifieds</a>
+                    </li>
+                    <li><a class="dropdown-item" href="https://opencagedata.com/solutions/image-processing">Image
+                        Processing</a></li>
+                    <li class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="https://opencagedata.com/enterprise">Enterprise Solutions</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav-item dropdown hover-dropdown">
+                  <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button">
+                    <span class="nav-link-inner-text">About us</span>
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li>
+                      <a class="dropdown-item media" href="https://opencagedata.com/about">
+                        <div class="media-body align-self-center">
+                          <h5>About us</h5>
+                          <div class="desc">where we come from, what we do</div>
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="https://opencagedata.com/contact">Contact us / Support</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="https://blog.opencagedata.com/" rel="noopener" target="_blank">The
+                        OpenCage blog</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="https://twitter.com/opencage" rel="noopener"
+                        target="_blank">Twitter</a>
+                    </li>
+                  </ul>
+                </li>
+
+              </ul>
+              <ul class="navbar-nav ml-auto" id="navbar-user-management">
+                <li class="nav-item"><a class="nav-link btn btn-sm btn-geocoder-light btn-xlight-border"
+                    href="https://opencagedata.com/users/sign_in">Log in</a></li>
+                <li class="nav-item"><a class="nav-link btn btn-sm btn-geocoder-bold" data-no-turbolink="true"
+                    href="https://opencagedata.com/users/sign_up">Sign up</a></li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+      <div class="container" id="geocoder-title">
+        <div class="row">
+          <div class="col-md-12">
+            <h1>Guide to Reverse Geocoding</h1>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </header>
+  <main>
+
+    <div class="revgeoguide" id="solutions-page">
+      <section class="py-5" id="top-image">
+        <div class="container">
+          <img alt="street of houses and coordinates" class="lazy"
+            src="Guide%20to%20Reverse%20Geocoding%20-%20OpenCage%20reverse%20geocoding%20guide_files/street-trans-563a41d9e8380bbeeba938eb194eb0fd47e47cb3759fc9a.png"
+            title="street of houses and coordinates">
+
+        </div>
+      </section>
+      <section style="background-color: #e6f4ed">
+        <div class="container">
+          <div class="rg-main">
+            <h2>A comprehensive guide to building, using, and running a reverse geocoder without Google or other
+              proprietary data sources.</h2>
+            <h3 id="guide-chapters">Reverse Geocoding Guide Chapters</h3>
+            <p></p>
+            <div class="rgtxt">
+              This guide digs into what reverse geocoding is, and how reverse geocoders are
+              used and built. It then walks you through implementing a reverse geocoding project
+              yourself, and gives you resources to expand your knowledge of working with geo
+              data.
+              <p></p>
+            </div>
+            <div id="chapters">
+              <section>
+                <div class="row">
+                  <div class="col-12 mb-5 mb-lg-0">
+                    <a class="card chapter rounded"
+                      href="https://opencagedata.com/reverse-geocoding/introduction-to-reverse-geocoding">
+                      <div class="row no-gutters">
+                        <div class="col-md-3">
+                          <img alt="House with coordinates" class="lazy card-img rounded-left"
+                            src="Guide%20to%20Reverse%20Geocoding%20-%20OpenCage%20reverse%20geocoding%20guide_files/houses-thumb-5bc804b1853f065857c4d31f49afd3a17960bc9a587ac1c.png"
+                            title="House with coordinates">
+                        </div>
+                        <div class="col-md-9">
+                          <div class="card-body">
+                            <h4>
+                              Introduction to Reverse Geocoding
+                            </h4>
+                            <p class="card-text mb-4">
+                              We start with the basics: what exactly is reverse geocoding?
+                              How does it differ from forward or "normal" geocoding?
+                              What should you consider when chosing a reverse geocoder?
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </section>
+              <section>
+                <div class="row">
+                  <div class="col-12 mb-5 mb-lg-0">
+                    <a class="card chapter rounded"
+                      href="https://opencagedata.com/reverse-geocoding/why-use-a-reverse-geocoder">
+                      <div class="row no-gutters">
+                        <div class="col-md-3">
+                          <img alt="vehicles with coordinates" class="lazy card-img rounded-left"
+                            src="Guide%20to%20Reverse%20Geocoding%20-%20OpenCage%20reverse%20geocoding%20guide_files/vehicles-thumb-0479cf78a4e02007bc57f8962d43ff0d28c491be547b9.png"
+                            title="vehicles with coordinates">
+                        </div>
+                        <div class="col-md-9">
+                          <div class="card-body">
+                            <h4>
+                              Why Use a Reverse Geocoder?
+                            </h4>
+                            <p class="card-text mb-4">
+                              Wherever there's a need for location-specific intelligence,
+                              a reverse geocoder can help. Using the coordinates from
+                              a device, determine local information,
+                              such as an address, a road, or a nearby landmark.
+                              Or effectively "zoom out" to understand the user's postal
+                              code, city, or country.
+                              There are many use cases for reverse geocoding across
+                              industries and applications.
+                              See how reverse geocoding is used in fleet tracking,
+                              Internet of Things, and other geo-aware practices.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </section>
+              <section>
+                <div class="row">
+                  <div class="col-12 mb-5 mb-lg-0">
+                    <a class="card chapter rounded"
+                      href="https://opencagedata.com/reverse-geocoding/how-reverse-geocoding-works">
+                      <div class="row no-gutters">
+                        <div class="col-md-3">
+                          <img alt="developer studying map" class="lazy card-img rounded-left"
+                            src="Guide%20to%20Reverse%20Geocoding%20-%20OpenCage%20reverse%20geocoding%20guide_files/dev-thumb-e9f4e7eb4526e17757977b4c1deb18546675be5d2a8d0bdde0.png"
+                            title="developer studying map">
+                        </div>
+                        <div class="col-md-9">
+                          <div class="card-body">
+                            <h4>
+                              How a Reverse Geocoder Works
+                            </h4>
+                            <p class="card-text mb-4">
+                              You can't simply "spin up" a reverse geocoder on a cheap web server. You
+                              need to break down the problems your geocoder will solve and deploy a
+                              suite of geocoders to return the appropriate data for your application.
+                              We'll dig into types of reverse geocoding, finding data sources, keeping
+                              data updated, and determining how granular to make your results.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </section>
+              <section>
+                <div class="row">
+                  <div class="col-12 mb-5 mb-lg-0">
+                    <a class="card chapter rounded"
+                      href="https://opencagedata.com/reverse-geocoding/tutorial-building-a-reverse-geocoder">
+                      <div class="row no-gutters">
+                        <div class="col-md-3">
+                          <img alt="developer explaining geocoding" class="lazy card-img rounded-left"
+                            src="Guide%20to%20Reverse%20Geocoding%20-%20OpenCage%20reverse%20geocoding%20guide_files/screen-thumb-1e97d42fcf9cab4d7081ad870ca1a39ba9e806a495a3eda.png"
+                            title="developer explaining geocoding">
+                        </div>
+                        <div class="col-md-9">
+                          <div class="card-body">
+                            <h4>
+                              Reverse Geocoding Tutorial
+                            </h4>
+                            <p class="card-text mb-4">
+                              For developers who want to roll their own geocoder, we'll show you how
+                              it's done, step-by-step. Using a world-wide dataset, you'll build a
+                              proof of concept to gain important intelligence from a pair of latitude
+                              and longitude coordinates. These ideas can be extended to any dataset to
+                              build a robust reverse geocoder.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </section>
+              <section>
+                <div class="row">
+                  <div class="col-12 mb-5 mb-lg-0">
+                    <a class="card chapter rounded" href="https://opencagedata.com/reverse-geocoding/resources">
+                      <div class="row no-gutters">
+                        <div class="col-md-3">
+                          <img alt="atlas with coordinates" class="lazy card-img rounded-left"
+                            src="Guide%20to%20Reverse%20Geocoding%20-%20OpenCage%20reverse%20geocoding%20guide_files/atlas-thumb-e16cc4f1223aaec458b7517d3fc44596c781c9c24ba6570c.png"
+                            title="atlas with coordinates">
+                        </div>
+                        <div class="col-md-9">
+                          <div class="card-body">
+                            <h4>
+                              Open Geocoding Resources
+                            </h4>
+                            <p class="card-text mb-4">
+                              A reverse geocoder can only be as good as the underlying data and tools.
+                              In particular, this section reviews the OpenStreetMap project's
+                              resources for map builders and other geo geeks. In addition, you'll find
+                              open source and public domain data, packages, and developer utilities
+                              used in robust, scalable geocoding projects from within the community.
+                              Finally, we list resources where you can learn more about geocoding and
+                              open data.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </section>
+            </div>
+
+
+          </div>
+          <div class="bottom-teaser my-5">
+            <h4>Need help with reverse geocoding?</h4>
+            <p>
+              At OpenCage we operate a highly-available, easy to use, affordable geocoding
+              API built on open data, and used by hundreds of customers around the world.
+              <a href="https://opencagedata.com/">Learn more</a>.
+            </p>
+          </div>
+
+        </div>
+      </section>
+    </div>
+
+    <div class="back-to-top" style="display: block;">
+      <i class="fas fa-angle-up"></i>
+    </div>
+  </main>
+  <footer>
+    <div class="container" id="footer">
+      <div class="row">
+        <div class="col-md-3">
+          <h5>Geocoding API</h5>
+          <ul>
+            <li><a href="https://opencagedata.com/api">API Documentation</a></li>
+            <li><a href="https://opencagedata.com/demo">Demo</a></li>
+            <li>
+              <a href="https://opencagedata.com/code#tutorials">Tutorials</a>
+              /
+              <a href="https://opencagedata.com/code#libraries">SDKs</a>
+            </li>
+            <li>
+              <a href="https://status.opencagedata.com/" rel="noopener" target="_blank">Uptime and Status</a>
+            </li>
+            <li><a href="https://opencagedata.com/faq">FAQ</a></li>
+            <li><a href="https://opencagedata.com/credits">Credits, Data, and Sources</a></li>
+            <li><a href="https://opencagedata.com/pricing">Pricing</a></li>
+            <li><a href="https://opencagedata.com/enterprise">Enterprise Solutions</a></li>
+          </ul>
+        </div>
+        <div class="col-md-3">
+          <h5>Guides</h5>
+          <ul>
+            <li><a href="https://opencagedata.com/reverse-geocoding">Reverse Geocoding</a></li>
+            <li><a href="https://opencagedata.com/why-use-open-data">Why use open data?</a></li>
+          </ul>
+          <h5>Use Cases</h5>
+          <ul>
+            <li><a href="https://opencagedata.com/solutions/vehicle-tracking">Fleet Tracking</a></li>
+            <li><a href="https://opencagedata.com/solutions/internet-of-things">Internet of Things</a></li>
+            <li><a href="https://opencagedata.com/solutions/data-enrichment">Data Enrichment</a></li>
+            <li><a href="https://opencagedata.com/solutions/payment-processing">Payment Processing</a></li>
+            <li><a href="https://opencagedata.com/solutions/classifieds">Classifieds</a></li>
+            <li><a href="https://opencagedata.com/solutions/image-processing">Image Processing</a></li>
+          </ul>
+        </div>
+        <div class="col-md-3">
+          <h5>Company Info</h5>
+          <ul>
+            <li><a href="https://opencagedata.com/about">About us / Imprint</a></li>
+            <li>
+              <a href="https://blog.opencagedata.com/" rel="noopener" target="_blank">Our blog</a>
+            </li>
+            <li>
+              <a class="twitter" href="https://twitter.com/opencage" rel="noopener" target="_blank">twitter:
+                @OpenCage</a>
+            </li>
+            <li><a href="https://opencagedata.com/jobs">We're hiring</a></li>
+            <li><a href="https://opencagedata.com/terms">Terms &amp; Conditions</a></li>
+            <li><a href="https://opencagedata.com/branding">Branding / Media Resources</a></li>
+            <li><a href="https://opencagedata.com/security-bounty">Security Bounty Program</a></li>
+          </ul>
+          <p></p>
+          <ul>
+            <li>
+              <a href="https://opencagedata.com/gdpr">
+                <img alt="GDPR badge" class="lazy"
+                  src="Guide%20to%20Reverse%20Geocoding%20-%20OpenCage%20reverse%20geocoding%20guide_files/gdpr-5a0013f87910c500519b8192b4e35edc7cfb4733c3a1089642676a2.svg"
+                  style="display:inline;" title="GDPR badge" width="98" height="40">
+              </a>
+              <br>
+              <a href="https://opencagedata.com/gdpr">GDPR / Privacy</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-3">
+          <h5>OpenCage GmbH</h5>
+          <p></p>
+          Friedrich-Ebert-Str. 7
+          <br>
+          48153 Münster
+          <br>
+          Germany
+          <p></p>
+          Company Reg. Münster HR B 17983
+          <br>
+          VAT Reg No: DE323788688
+          <p></p>
+          <a class="btn btn-primary btn-geocoder-empty-reverse" href="https://opencagedata.com/contact">
+            Contact Us
+          </a>
+          <p></p>
+          Proud corporate members of:
+          <p></p>
+          <ul class="disc">
+            <li class="ml1">the OpenStreetMap Foundation</li>
+            <li class="ml1">Association for Geoinformatics, GeoIT and Navigation e.V.</li>
+            <li class="ml1">FOSSGIS e.V.</li>
+            <li class="ml1">the OpenStreetMap UK CIC</li>
+          </ul>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="copyright">
+            © 2013-2020 OpenCage GmbH
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </footer>
+  <script
+    src="Guide%20to%20Reverse%20Geocoding%20-%20OpenCage%20reverse%20geocoding%20guide_files/application-1b9a0b989ab80425f7c517bd14db15a72a4677ee8a8e9851c.js"></script>
+
+
+  <script src="Guide%20to%20Reverse%20Geocoding%20-%20OpenCage%20reverse%20geocoding%20guide_files/script.js"
+    site="UMKIX" defer="defer"></script>
+
+
+
+
+</body>
+
+</html>
